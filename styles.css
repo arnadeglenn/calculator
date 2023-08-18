@@ -1,0 +1,117 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+    gap: 30px;
+    font-family: American Typewriter, serif;
+}
+
+h1 {
+    margin: 10px 0px 0px 0px;
+}
+
+.description {
+    margin: 5px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-calculator {
+    background-color: rgb(6, 47, 2);
+    border-radius: 12px;
+    border-color: lightgreen;
+    border-width: 2px;
+    border-style: solid;
+    height: 600px;
+    width: 450px;
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.result-text {
+    background-color: rgb(239, 244, 235);
+    border-radius: 12px;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    margin: 1px 1px 0px 1px;
+    height: 99px;
+    width: 440px;
+    font-size: 26px;
+    color: rgb(6, 47, 2);
+    display: flex;
+    align-items: center;
+}
+
+.buttons-box {
+    margin: 0px 1px 1px 1px;
+    height: 495px;
+    width: 444px;
+    padding: 2px;
+    border-radius: 12px;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row-1, .row-2, .row-3, .row-4, .row-5{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px;
+    padding: 0px;
+    height: 98.6px;
+    width: 440px;
+}
+
+.button {
+    background-color: rgb(6, 47, 2);
+    border-radius: 12px;
+    font-size: 26px;
+}
+
+.special-ops, .number-ops, .classic-operator {
+    height: 96px;
+    width: 108px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.zero-ops {
+    height: 96px;
+    width: 216px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(193, 238, 193);
+    color: rgb(6, 47, 2);
+}
+
+.number-ops {
+    background-color: rgb(193, 238, 193);
+    color: rgb(6, 47, 2);
+}
+
+.classic-operator {
+    background-color: rgb(186, 248, 228);
+    color: rgb(6, 47, 2);
+}
+
+.special-ops {
+    background-color: rgb(113, 199, 146);
+    color: rgb(6, 47, 2);
+}

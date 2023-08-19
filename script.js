@@ -45,3 +45,26 @@ function operate (numA,oper,numB) {
         return "OOPS! Pick an operator!"
     }
 };
+
+const btnAC = document.querySelector('#btnAC');
+const btnNeg = document.querySelector('#btnNeg');
+const btnRemain = document.querySelector('#btnRemain');
+const btnAdd = document.querySelector('#btnAdd');
+const btn9 = document.querySelector('#btn9');
+const btn8 = document.querySelector('#btn8');
+const btn7 = document.querySelector('#btn7');
+const btnSubtract = document.querySelector('#btnSubtract');
+const btn6 = document.querySelector('#btn6');
+const btn5 = document.querySelector('#btn5');
+const btn4 = document.querySelector('#btn4');
+const btnMultiply = document.querySelector('#btnMultiply');
+const btn3 = document.querySelector('#btn3');
+const btn2 = document.querySelector('#btn2');
+const btn1 = document.querySelector('#btn1');
+const btnDivide = document.querySelector('#btnDivide');
+const btn0 = document.querySelector('#btn0');
+const btnDecimal = document.querySelector('#btnDecimal');
+const btnEqual = document.querySelector('#btnEqual');
+const resultBox = document.querySelector('#resultBox');
+
+const resultText = document.createElement('')

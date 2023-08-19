@@ -67,4 +67,11 @@ const btnDecimal = document.querySelector('#btnDecimal');
 const btnEqual = document.querySelector('#btnEqual');
 const resultBox = document.querySelector('#resultBox');
 
-const resultText = document.createElement('')
+const resultText = document.createElement('p');
+resultText.style.cssText = "margin-right: 10px; margin-left: auto;";
+resultBox.appendChild(resultText);
+
+
+resultText.textContent = "Hello";
+
+

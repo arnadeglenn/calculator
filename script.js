@@ -1,6 +1,6 @@
-let num1
-let num2
-let operator
+let num1=0
+let num2=0
+let operator='';
 
 function add(a,b) {
     return a + b;
@@ -49,29 +49,54 @@ function operate (numA,oper,numB) {
 const btnAC = document.querySelector('#btnAC');
 const btnNeg = document.querySelector('#btnNeg');
 const btnRemain = document.querySelector('#btnRemain');
-const btnAdd = document.querySelector('#btnAdd');
-const btn9 = document.querySelector('#btn9');
-const btn8 = document.querySelector('#btn8');
-const btn7 = document.querySelector('#btn7');
-const btnSubtract = document.querySelector('#btnSubtract');
-const btn6 = document.querySelector('#btn6');
-const btn5 = document.querySelector('#btn5');
-const btn4 = document.querySelector('#btn4');
-const btnMultiply = document.querySelector('#btnMultiply');
-const btn3 = document.querySelector('#btn3');
-const btn2 = document.querySelector('#btn2');
-const btn1 = document.querySelector('#btn1');
-const btnDivide = document.querySelector('#btnDivide');
 const btn0 = document.querySelector('#btn0');
 const btnDecimal = document.querySelector('#btnDecimal');
 const btnEqual = document.querySelector('#btnEqual');
 const resultBox = document.querySelector('#resultBox');
+const numberButtons = document.querySelectorAll('.number-ops');
+const operatorButtons = document.querySelectorAll('.classic-operator');
 
 const resultText = document.createElement('p');
 resultText.style.cssText = "margin-right: 10px; margin-left: auto;";
 resultBox.appendChild(resultText);
 
+//resultText.textContent = "Hello";
 
-resultText.textContent = "Hello";
+numberButtons.forEach(button => {
+    if (operator!==''){
+        resultText.textContent = '';
+        button.addEventListener('click', (e) => {
+            resultText.textContent += button.textContent;
+        });  
+    } else {
+        button.addEventListener('click', (e) => {
+            resultText.textContent += button.textContent;
+        })
+    };
+});
+
+operatorButtons.forEach(button => {
+    button.addEventListener('click', (e) => {
+    num1 = parseFloat(resultText.textContent);
+    operator = button.textContent;
+    resultText.textContent = button.textContent;
+    });
+});
+
+btnAC.addEventListener('click', (e) => {
+    resultText.textContent='';
+    num1=0;
+    num2=0;
+    operator='';
+});
+
+
+
+
+
+
+
+
+
 
 

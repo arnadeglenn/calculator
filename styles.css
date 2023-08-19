@@ -89,6 +89,8 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .zero-ops {
@@ -99,6 +101,12 @@ h1 {
     align-items: center;
     background-color: rgb(193, 238, 193);
     color: rgb(6, 47, 2);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.zero-ops:hover {
+    background-color: rgb(163, 230, 163);
 }
 
 .number-ops {
@@ -106,12 +114,24 @@ h1 {
     color: rgb(6, 47, 2);
 }
 
+.number-ops:hover {
+    background-color: rgb(163, 230, 163);
+}
+
 .classic-operator {
     background-color: rgb(186, 248, 228);
     color: rgb(6, 47, 2);
 }
 
+.classic-operator:hover {
+    background-color: rgb(143, 230, 202);
+}
+
 .special-ops {
     background-color: rgb(113, 199, 146);
     color: rgb(6, 47, 2);
+}
+
+.special-ops:hover {
+    background-color: rgb(78, 184, 119);
 }

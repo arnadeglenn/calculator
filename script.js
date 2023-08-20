@@ -1,6 +1,9 @@
 let num1=0
 let num2=0
 let operator='';
+let displayNumber = '';
+let numberType1=true;
+let numberType2 = true;
 
 function add(a,b) {
     return a + b;
@@ -63,25 +66,35 @@ resultBox.appendChild(resultText);
 //resultText.textContent = "Hello";
 
 numberButtons.forEach(button => {
-    if (operator!==''){
-        resultText.textContent = '';
         button.addEventListener('click', (e) => {
-            resultText.textContent += button.textContent;
+            if (numberType1 === false) {
+                displayNumber += button.textContent;
+                resultText.textContent = displayNumber;
+                numberType2 = false;
+            } else {
+                displayNumber += button.textContent;
+                resultText.textContent = displayNumber;
+                return displayNumber;
+            };  
         });  
-    } else {
-        button.addEventListener('click', (e) => {
-            resultText.textContent += button.textContent;
-        })
-    };
-});
+    });
 
 operatorButtons.forEach(button => {
     button.addEventListener('click', (e) => {
-    num1 = parseFloat(resultText.textContent);
-    operator = button.textContent;
-    resultText.textContent = button.textContent;
+        if (typeof displayNumber === "string") {
+            num1 = parseFloat(displayNumber);
+            operator = button.textContent;
+            displayNumber = '';
+            numberType1 = false;
+            resultText.textContent = '';
+         
+        }
     });
 });
+
+btnEqual
+
+
 
 btnAC.addEventListener('click', (e) => {
     resultText.textContent='';

@@ -83,7 +83,7 @@ h1 {
     font-size: 26px;
 }
 
-.special-ops, .number-ops, .classic-operator {
+.special-ops, .number-ops, .classic-operator, .equal-operator {
     height: 96px;
     width: 108px;
     display: flex;
@@ -124,6 +124,15 @@ h1 {
 }
 
 .classic-operator:hover {
+    background-color: rgb(143, 230, 202);
+}
+
+.equal-operator {
+    background-color: rgb(186, 248, 228);
+    color: rgb(6, 47, 2);
+}
+
+.equal-operator:hover {
     background-color: rgb(143, 230, 202);
 }
 

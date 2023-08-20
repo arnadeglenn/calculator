@@ -1,6 +1,7 @@
 let num1=0
 let num2=0
 let operator='';
+let equalResult = 0;
 let displayNumber = '';
 let numberType1=true;
 let numberType2 = true;
@@ -92,7 +93,14 @@ operatorButtons.forEach(button => {
     });
 });
 
-btnEqual
+btnEqual.addEventListener('click', (e) => {
+    if (numberType2===false && typeof displayNumber==="string") {
+        num2 = parseFloat(displayNumber);
+        equalResult = operate(num1, operator, num2);
+        displayNumber = equalResult;
+        resultText.textContent = displayNumber;
+    }
+})
 
 
 
@@ -101,6 +109,8 @@ btnAC.addEventListener('click', (e) => {
     num1=0;
     num2=0;
     operator='';
+    displayNumber='';
+    equalResult = 0;
 });
 
 

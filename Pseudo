@@ -1,0 +1,6 @@
+User selects number in DOM 
+when user clicks operator
+    number is stored to num1
+    operator is stored to operator
+    Reset number event addEventListener
+click number after operator causes DOM to clear and input a second number

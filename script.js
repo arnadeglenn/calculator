@@ -81,7 +81,6 @@ numberButtons.forEach(button => {
                 resultText.textContent = displayNumber;
             } else if (equalResult3 === true && numberType2 === false && numberType1 === false) {
                 num2 = 0;
-                displayNumber = '';
                 equalResult = 0;
                 displayNumber += button.textContent;
                 resultText.textContent = displayNumber;
@@ -125,6 +124,7 @@ btnEqual.addEventListener('click', (e) => {
         displayNumber = equalResult;
         resultText.textContent = displayNumber;
         numberType1 = true;
+        numberType2 = false;
         equalResult3 = true;
     }
 })

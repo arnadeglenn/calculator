@@ -6,6 +6,7 @@ let displayNumber = '';
 let numberType1=true;
 let numberType2 = true;
 let equalResult3 = false;
+let decimalResult = false;
 
 function add(a,b) {
     return a + b;
@@ -129,13 +130,18 @@ btnEqual.addEventListener('click', (e) => {
 })
 
 btnDecimal.addEventListener('click', (e) => {
-    if (displayNumber.includes('.')) {
-        return;
-    } else {
-        displayNumber += '.';
-        resultText.textContent = displayNumber;
-    }
-});
+        if (displayNumber.includes('.')) {
+            return;
+        } else {
+            displayNumber += '.';
+            resultText.textContent = displayNumber;
+        }
+    });
+
+btnNeg.addEventListener('click', (e) => {
+    displayNumber = `-${displayNumber}`;
+    resultText.textContent=displayNumber;
+})
 
 
 

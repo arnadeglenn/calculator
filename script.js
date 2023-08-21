@@ -77,9 +77,7 @@ numberButtons.forEach(button => {
                 equalResult = 0;
                 numberType2 = true;
                 equalResult3 = false;
-                displayNumber += button.textContent;
                 resultText.textContent = displayNumber;
-                return displayNumber;
             } else if (equalResult3 === true && numberType2 === false && numberType1 === false) {
                 num2 = 0;
                 displayNumber = '';

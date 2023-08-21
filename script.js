@@ -128,6 +128,15 @@ btnEqual.addEventListener('click', (e) => {
     }
 })
 
+btnDecimal.addEventListener('click', (e) => {
+    if (displayNumber.includes('.')) {
+        return;
+    } else {
+        displayNumber += '.';
+        resultText.textContent = displayNumber;
+    }
+});
+
 
 
 btnAC.addEventListener('click', (e) => {

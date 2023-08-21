@@ -5,6 +5,7 @@ let equalResult = 0;
 let displayNumber = '';
 let numberType1=true;
 let numberType2 = true;
+let equalResult3 = false;
 
 function add(a,b) {
     return a + b;
@@ -68,11 +69,30 @@ resultBox.appendChild(resultText);
 
 numberButtons.forEach(button => {
         button.addEventListener('click', (e) => {
-            if (numberType1 === false) {
+            if (equalResult3 === true && numberType2===false && numberType1 === true) { //operate on second cycle w/o operator
+                num1=0;
+                num2=0;
+                operator = '';
+                displayNumber = '';
+                equalResult = 0;
+                numberType2 = true;
+                equalResult3 = false;
+                displayNumber += button.textContent;
+                resultText.textContent = displayNumber;
+                return displayNumber;
+            } else if (equalResult3 === true && numberType2 === false && numberType1 === false) {
+                num2 = 0;
+                displayNumber = '';
+                equalResult = 0;
+                displayNumber += button.textContent;
+                resultText.textContent = displayNumber;
+                return displayNumber;
+            } else if (equalResult3 === false && numberType1 === false) { //find num 2 first iter
                 displayNumber += button.textContent;
                 resultText.textContent = displayNumber;
                 numberType2 = false;
-            } else {
+                return displayNumber;
+            } else {                                                                    //pick 1st num
                 displayNumber += button.textContent;
                 resultText.textContent = displayNumber;
                 return displayNumber;
@@ -82,14 +102,20 @@ numberButtons.forEach(button => {
 
 operatorButtons.forEach(button => {
     button.addEventListener('click', (e) => {
-        if (typeof displayNumber === "string") {
+        if (equalResult3 === true && numberType1 === true) { //2nd cycle
+            num1 = equalResult;
+            num2 = 0;
+            operator = button.textContent;
+            displayNumber = '';
+            numberType1 = false;
+            resultText.textContent = '';
+        } else if (typeof displayNumber === "string" && displayNumber !== '') { //1st cycle
             num1 = parseFloat(displayNumber);
             operator = button.textContent;
             displayNumber = '';
             numberType1 = false;
             resultText.textContent = '';
-         
-        }
+        };
     });
 });
 
@@ -99,6 +125,8 @@ btnEqual.addEventListener('click', (e) => {
         equalResult = operate(num1, operator, num2);
         displayNumber = equalResult;
         resultText.textContent = displayNumber;
+        numberType1 = true;
+        equalResult3 = true;
     }
 })
 
@@ -111,6 +139,9 @@ btnAC.addEventListener('click', (e) => {
     operator='';
     displayNumber='';
     equalResult = 0;
+    numberType1 = true;
+    numberType2 = true;
+    equalResult3 = false;
 });
 
 
